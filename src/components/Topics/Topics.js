@@ -5,7 +5,7 @@ import Topic from '../Topic/Topic';
 const Topics = () => {
     const quizeTopic = useLoaderData();
     return (
-        <div>
+        <div className='flex flex-row'>
             {
                 quizeTopic.data.map(topic => <Topic
                     key={topic.id}

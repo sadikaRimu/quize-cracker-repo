@@ -14,9 +14,9 @@ const Header = () => {
                 }
             </div>
             <nav className='mr-20'>
-                <Link className='mr-10' to='/topics'>Topics</Link>
-                <Link className='mr-10' to='/statistics'>Statistics</Link>
-                <Link className='mr-10' to='/blog'>Blog</Link>
+                <Link className='mr-10 hover:text-red-800' to='/topics'>Topics</Link>
+                <Link className='mr-10 hover:text-red-800' to='/statistics'>Statistics</Link>
+                <Link className='mr-10 hover:text-red-800' to='/blog'>Blog</Link>
             </nav>
         </div>
     );
