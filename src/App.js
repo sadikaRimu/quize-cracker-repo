@@ -5,6 +5,8 @@ import Main from './layouts/Main';
 import Topics from './components/Topics/Topics';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
+import { data } from 'autoprefixer';
+import { QuizeDataLoaders } from './loaders/QuizeDataLoadesr';
 
 function App() {
   const router = createBrowserRouter([
@@ -14,6 +16,7 @@ function App() {
       children: [
         {
           path: '/topics',
+          loader: QuizeDataLoaders,
           element: <Topics></Topics>
         },
         {
