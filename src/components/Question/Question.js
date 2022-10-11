@@ -1,5 +1,5 @@
 import React from 'react';
-import { BeakerIcon } from '@heroicons/react/24/solid'
+import { EyeIcon } from '@heroicons/react/24/solid'
 
 const Question = ({ questions }) => {
     const { id, question, options } = questions;
@@ -14,12 +14,20 @@ const Question = ({ questions }) => {
         }
         // console.log(correctAns);
     }
+    const displayCorrectAns = (id) => {
+        // console.log(id);
+        //  const correctAnswer = questions.map(qs => qs.id);
+        //   const correctAnswer = questions.options.find(question => question.id === id);
+        // console.log(correctAnswer);
+    }
     return (
         <div className=''>
 
             <div className='width-12 bg-slate-200 m-10 p-10 rounded'>
                 <div>
+                    <EyeIcon onClick={() => displayCorrectAns(id)} className="h-6 w-6 text-blue-500" />
                     <h2 className='font-bold mb-5 text-xl'>Question:{question}</h2>
+
                 </div>
                 <div className='grid grid-cols-2 gap-2 text-lg' onClick={() => handleRightWrong(id)}>
 
