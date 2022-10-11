@@ -7,6 +7,7 @@ import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
 import { data } from 'autoprefixer';
 import { QuizeDataLoaders } from './loaders/QuizeDataLoadesr';
+import QuizeQuestion from './components/QuizeQuestion/QuizeQuestion';
 
 function App() {
   const router = createBrowserRouter([
@@ -26,8 +27,18 @@ function App() {
         {
           path: '/blog',
           element: <Blog></Blog>
+        },
+        {
+          path: '/quizQuestion/:quizeId',
+          loader: ({ params }) => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizeId}`)
+          },
+          element: <QuizeQuestion></QuizeQuestion>
         }
       ]
+    },
+    {
+      path: '*', element: <div>this route not found</div>
     }
   ]);
   return (

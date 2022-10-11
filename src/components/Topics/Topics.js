@@ -1,9 +1,10 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import Topic from '../Topic/Topic';
 
 const Topics = () => {
     const quizeTopic = useLoaderData();
+
     return (
         <div className='flex flex-row'>
             {
