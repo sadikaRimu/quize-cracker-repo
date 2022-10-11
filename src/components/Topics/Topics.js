@@ -6,14 +6,18 @@ const Topics = () => {
     const quizeTopic = useLoaderData();
 
     return (
-        <div className='flex flex-row'>
-            {
-                quizeTopic.data.map(topic => <Topic
-                    key={topic.id}
-                    topic={topic}
-                ></Topic>)
-            }
-        </div >
+        <div>
+            <img src='../../../public/exam.png' alt='' />
+            <div className='flex flex-row'>
+
+                {
+                    quizeTopic.data.map(topic => <Topic
+                        key={topic.id}
+                        topic={topic}
+                    ></Topic>)
+                }
+            </div >
+        </div>
     );
 };
 
