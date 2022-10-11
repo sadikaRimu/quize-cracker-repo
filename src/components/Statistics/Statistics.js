@@ -8,13 +8,13 @@ const Statistics = () => {
     const { id, name, total } = router.data;
     return (
         <div>
-            <LineChart width={500}
-                height={300}
+            <LineChart width={800}
+                height={500}
                 data={router.data}
                 margin={{
-                    top: 5,
+                    top: 50,
                     right: 30,
-                    left: 20,
+                    left: 30,
                     bottom: 5,
                 }}>
                 <CartesianGrid strokeDasharray="3 3" />
