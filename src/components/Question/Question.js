@@ -1,18 +1,31 @@
 import React from 'react';
-import { EyeIcon } from '@heroicons/react/24/solid'
+import { EyeIcon } from '@heroicons/react/24/solid';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Question = ({ questions }) => {
     const { id, question, options, correctAnswer } = questions;
     // console.log(questions);
     const handleRightWrong = (option, id) => {
         const correctAns = questions.options.find(question => question.id === id);
-        if (option === correctAns) {
-            alert('correct Answer');
+        let correctCount = 0;
+        if (option !== correctAns) {
+            console.log('correct', correctAns);
+
+
+            toast.warning('incorrect');
+
+
+
+
+
         }
         else {
-            alert('incorrect Answer');
+            toast.success("correct");
+            correctCount = correctCount + 1;
+            toast.success(correctCount, ' correct answer');
         }
-        // console.log(correctAns);
+
     }
     const displayCorrectAns = (correctAnswer) => {
         alert(correctAnswer);
@@ -22,11 +35,12 @@ const Question = ({ questions }) => {
 
             <div className='width-12 bg-slate-200 m-10 p-10 rounded'>
                 <div>
+                    <ToastContainer />
                     <EyeIcon onClick={() => displayCorrectAns(correctAnswer)} className="h-6 w-6 text-blue-500" />
                     <h2 className='font-bold mb-5 text-xl'>Question:{question}</h2>
 
                 </div>
-                <div className='grid grid-cols-2 gap-2 text-lg' onClick={() => handleRightWrong(id)}>
+                <div className='grid grid-cols-2 gap-2 text-lg'>
 
                     {
                         options.map(option => <p className='border border-sky-800 rounded p-8'>
