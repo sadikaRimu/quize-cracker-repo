@@ -8,7 +8,7 @@ const Topics = () => {
     return (
         <div>
             <img src='../../../public/exam.png' alt='' />
-            <div className='flex flex-row'>
+            <div className='flex flex-col lg:flex-row w-full'>
 
                 {
                     quizeTopic.data.map(topic => <Topic

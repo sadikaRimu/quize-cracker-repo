@@ -5,26 +5,37 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Question = ({ questions }) => {
     const { id, question, options, correctAnswer } = questions;
-    // console.log(questions);
+    //console.log(questions);
     const handleRightWrong = (option, id) => {
-        const correctAns = questions.options.find(question => question.id === id);
-        let correctCount = 0;
-        if (option !== correctAns) {
-            console.log('correct', correctAns);
+        //const correctAns = questions.options.find(question => question.id === id);
+        const matchedOption = questions.options.forEach(qs => {
+            // const getOption = qs.options.find(x => option === x);
+            // return getOption;
 
-
-            toast.warning('incorrect');
-
-
-
-
-
+        });
+        // console.log(matchedOption);
+        questions.options.map(qs => {
+            if (option === qs.correctAnswer) {
+                toast.success('correct');
+            }
+            else {
+                toast.warning("incorrect");
+            }
+            return 0;
+        })
+        for (const i in questions) {
+            console.log(i[questions]);
         }
-        else {
-            toast.success("correct");
-            correctCount = correctCount + 1;
-            toast.success(correctCount, ' correct answer');
-        }
+        // if (option === correctAns) {
+        //     console.log('correct', correctAns);
+
+
+        //     toast.success('correct');
+
+        // }
+        // else {
+        //     toast.warning("incorrect");
+        // }
 
     }
     const displayCorrectAns = (correctAnswer) => {

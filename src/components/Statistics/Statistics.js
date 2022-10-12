@@ -8,7 +8,7 @@ const Statistics = () => {
     const { id, name, total } = router.data;
     return (
         <div>
-            <LineChart width={800}
+            <LineChart width={500}
                 height={500}
                 data={router.data}
                 margin={{
