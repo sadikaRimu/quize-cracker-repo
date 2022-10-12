@@ -39,7 +39,7 @@ const Question = ({ questions }) => {
                     <h2 className='font-bold mb-5 text-xl'>Question:{question}</h2>
 
                 </div>
-                <div className='sm:flex flex-row my-2  lg:grid grid-cols-2 gap-2 text-lg'>
+                <div className='sm:flex flex-row my-2 lg:grid grid-cols-2 gap-2 text-lg'>
 
                     {
                         options.map(option => <p className='border border-sky-800 rounded p-8'>
