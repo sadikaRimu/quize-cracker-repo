@@ -8,23 +8,25 @@ const Statistics = () => {
     const { id, name, total } = router.data;
     return (
         <div>
-            <LineChart width={500}
-                height={500}
-                data={router.data}
-                margin={{
-                    top: 50,
-                    right: 30,
-                    left: 30,
-                    bottom: 5,
-                }}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Line type="monotone" dataKey="name" stroke="#8884d8" activeDot={{ r: 8 }} />
-                <Line type="monotone" dataKey="total" stroke="#82ca9d" />
-            </LineChart>
+            <ResponsiveContainer width={'99%'} height={500}>
+                <LineChart width={500}
+                    height={500}
+                    data={router.data}
+                    margin={{
+                        top: 50,
+                        right: 30,
+                        left: 30,
+                        bottom: 5,
+                    }}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <Line type="monotone" dataKey="name" stroke="#8884d8" activeDot={{ r: 8 }} />
+                    <Line type="monotone" dataKey="total" stroke="#82ca9d" />
+                </LineChart>
+            </ResponsiveContainer>
         </div>
     );
 };

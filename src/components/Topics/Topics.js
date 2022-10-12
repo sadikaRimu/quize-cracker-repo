@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
+import exam from '../../images/exam.png';
 import Topic from '../Topic/Topic';
 
 const Topics = () => {
@@ -7,7 +8,7 @@ const Topics = () => {
 
     return (
         <div>
-            <img src='../../../public/exam.png' alt='' />
+            <img className='h-80 w-full' src={exam} alt='' />
             <div className='flex flex-col lg:flex-row w-full'>
 
                 {

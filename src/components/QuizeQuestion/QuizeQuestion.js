@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Options from '../Options/Options';
 import Question from '../Question/Question';
 
 const QuizeQuestion = () => {
